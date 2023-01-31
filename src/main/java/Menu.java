@@ -28,7 +28,7 @@ static void userSelectionProcess(int userInput){
             System.out.println(userInput);
             break;
         case 2:
-            System.out.println(userInput);
+            ISSPass.issPass();
             break;
         case 3:
             System.out.println(userInput);
