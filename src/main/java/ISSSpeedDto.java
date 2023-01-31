@@ -7,8 +7,7 @@ public class ISSSpeedDto {
 
     private String message;
 
-    private Double latitude;
-    private Double longitude;
+    private ISSSpeed_position iss_position;
 
 
 
@@ -30,31 +29,20 @@ public class ISSSpeedDto {
         this.message = message;
     }
 
-    public Double getLatitude() {
-        return latitude;
+    public ISSSpeed_position getIss_position() {
+        return iss_position;
     }
 
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
+    public void setIss_position(ISSSpeed_position iss_position) {
+        this.iss_position = iss_position;
     }
-
-    public Double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
-    }
-
 
     @Override
     public String toString() {
         return "ISSSpeedDto{" +
                 "timestamp=" + timestamp +
                 ", message='" + message + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
+                ", iss_position=" + iss_position +
                 '}';
     }
-
 }
