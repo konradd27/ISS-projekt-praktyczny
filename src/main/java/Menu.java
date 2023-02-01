@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Menu {
+
     private boolean isRunning = true;
     private static final String OPTIONS = """
             What d u wana do?
@@ -11,6 +12,7 @@ public class Menu {
             5 - dodatkowa statystika
             6 - zakoncz program""";
 private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
+
 
     public void startMenu() {
         do {
@@ -74,9 +76,11 @@ private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
     }
 
 
+
     private void end() throws Exception {
         showMessage("Program Terminated");
         isRunning = false;
+
 
     }
 
