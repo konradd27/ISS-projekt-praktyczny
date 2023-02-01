@@ -1,6 +1,6 @@
 public class ISSSpeed_position {
-    Double latitude;
-    Double longitude;
+    private Double latitude;
+    private Double longitude;
 
     public Double getLatitude() {
         return latitude;

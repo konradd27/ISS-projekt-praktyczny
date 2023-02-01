@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Menu {
+    boolean x;
 
     static void showUserMenu(){
         System.out.println("What d u wana do?");
@@ -22,6 +23,7 @@ public class Menu {
         }
     }
 static void userSelectionProcess(int userInput){
+
 
     switch (userInput){
         case 1:

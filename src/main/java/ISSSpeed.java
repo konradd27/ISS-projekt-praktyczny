@@ -7,8 +7,7 @@ public class ISSSpeed {
         ISSSpeedDto issSpeedDto = issSpeed_deserialize.getIssJson();
         Thread.sleep(5000);
         ISSSpeedDto issSpeedDto2 = issSpeed_deserialize.getIssJson();
-        System.out.println(issSpeedDto2);
-        System.out.println(issSpeedDto);
+
 
         double lat1 = issSpeedDto.getIss_position().getLatitude();
         double lat2 = issSpeedDto2.getIss_position().getLatitude();
