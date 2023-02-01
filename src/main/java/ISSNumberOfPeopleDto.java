@@ -16,6 +16,10 @@ public class ISSNumberOfPeopleDto {
         this.people = people;
     }
 
+    public List<ISSPeople> getPeople() {
+        return people;
+    }
+
     public Integer getNumber() {
         return number;
     }
