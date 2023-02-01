@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-Menu.showUserMenu();
+Menu menu = new Menu();
+menu.startMenu();
+};
 
         //komentarz
 
 
     }
-}
+
