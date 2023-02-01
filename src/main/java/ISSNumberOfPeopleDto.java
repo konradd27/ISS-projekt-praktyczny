@@ -1,7 +1,9 @@
+import java.util.List;
+
 public class ISSNumberOfPeopleDto {
     private String message;
 
-    private String name;
+    private List<ISSPeople> people;
 
     public String getMessage() {
         return message;
@@ -12,19 +14,19 @@ public class ISSNumberOfPeopleDto {
     }
 
 
-    public String getName() {
-        return name;
+    public List getName() {
+        return people;
     }
 
     public void setName(String message) {
-        this.name = name;
+        this.people = people;
     }
 
     @Override
     public String toString() {
         return "ISSNumberOfPeopleDto{" +
                 "message='" + message + '\'' +
-                ", name='" + name + '\'' +
+                ", people=" + people +
                 '}';
     }
 }
