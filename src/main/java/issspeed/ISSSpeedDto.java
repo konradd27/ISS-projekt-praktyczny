@@ -1,6 +1,4 @@
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.Map;
+package issspeed;
 
 public class ISSSpeedDto {
     private Integer timestamp;
@@ -39,7 +37,7 @@ public class ISSSpeedDto {
 
     @Override
     public String toString() {
-        return "ISSSpeedDto{" +
+        return "issspeed.ISSSpeedDto{" +
                 "timestamp=" + timestamp +
                 ", message='" + message + '\'' +
                 ", iss_position=" + iss_position +

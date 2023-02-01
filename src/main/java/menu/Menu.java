@@ -1,4 +1,12 @@
+package menu;
+
+import java.util.List;
 import java.util.Scanner;
+
+import issnumberofppl.ISSNumberOfPeople;
+import issnumberofppl.ISSPeople;
+import issspeed.ISSSpeed;
+import isspass.ISSPass;
 
 public class Menu {
 
@@ -11,7 +19,7 @@ public class Menu {
             4 - GUI - pozycja ISS na mapie swiata
             5 - dodatkowa statystika
             6 - zakoncz program""";
-private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
+    private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
 
 
     public void startMenu() {
@@ -45,19 +53,29 @@ private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
 
         switch (input) {
             case 1:
-                try{
+                try {
                     ISSSpeed issSpeed = new ISSSpeed();
                     double speed = issSpeed.getSpeed();
                     System.out.println("ISS current speed is " + speed + " M/S");
                     break;
-                } catch (Exception e){e.printStackTrace();}
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             case 2:
                 ISSPass.issPass();
                 break;
             case 3:
-                System.out.println(input);
-                break;
+                try {
+                    ISSNumberOfPeople issNumberOfPeople = new ISSNumberOfPeople();
+                    int nrOfPpl = issNumberOfPeople.getNumberOfPeople();
+                    System.out.println("Current nr of ppl @ ISS is " + nrOfPpl);
+                    System.out.println("Full list of ppl @ ISS is:");
+                    issNumberOfPeople.getListOfPeople();
+                    break;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             case 4:
                 System.out.println(input);
                 break;
@@ -74,7 +92,6 @@ private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
         }
 
     }
-
 
 
     private void end() throws Exception {

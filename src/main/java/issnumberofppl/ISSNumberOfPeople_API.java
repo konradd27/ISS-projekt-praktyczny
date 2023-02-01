@@ -1,3 +1,5 @@
+package issnumberofppl;
+
 import okhttp3.*;
 
 public class ISSNumberOfPeople_API {
@@ -12,10 +14,10 @@ public class ISSNumberOfPeople_API {
 
         Response response = call.execute();
 
-        System.out.println(response.body().string());
+
     }
 
-    public static String getJSON() throws Exception{
+    public static String getJSON() throws Exception {
         Request request = new Request.Builder()
                 .url(BASE_URL)
                 .build();
