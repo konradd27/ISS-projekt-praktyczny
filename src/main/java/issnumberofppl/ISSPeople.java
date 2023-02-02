@@ -1,8 +1,32 @@
 package issnumberofppl;
 
+import javax.persistence.*;
+import javax.print.attribute.standard.DateTimeAtCreation;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@Entity
+@Table(name = "people")
 public class ISSPeople {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "craft")
     private String craft;
+    @Column(name = "time")
+    private LocalDateTime datetime = java.time.LocalDateTime.now();
+
+    public ISSPeople(String name, String craft) {
+        this.name = name;
+        this.craft = craft;
+
+    }
+
+    public ISSPeople() {
+    }
 
     public String getName() {
         return name;

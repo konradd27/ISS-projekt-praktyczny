@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import issnumberofppl.ISSNumberOfPeople;
+import issnumberofppl.ISSNumberOfPeople_Hibernate;
 import issnumberofppl.ISSPeople;
 import issspeed.ISSSpeed;
 import isspass.ISSPass;
@@ -71,7 +72,13 @@ public class Menu {
                     int nrOfPpl = issNumberOfPeople.getNumberOfPeople();
                     System.out.println("Current nr of ppl @ ISS is " + nrOfPpl);
                     System.out.println("Full list of ppl @ ISS is:");
-                    issNumberOfPeople.getListOfPeople();
+
+                    for(ISSPeople people : issNumberOfPeople.getListOfPeople()){
+                        System.out.println(people.getName());
+                    }
+
+                    ISSNumberOfPeople_Hibernate issNumberOfPeople_hibernate = new ISSNumberOfPeople_Hibernate();
+                    issNumberOfPeople_hibernate.saveISSPeople(issNumberOfPeople.getListOfPeople());
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();

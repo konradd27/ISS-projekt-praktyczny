@@ -1,19 +1,34 @@
 package issnumberofppl;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ISSNumberOfPeopleDto {
+
+    private int id;
+
     private String message;
 
-    List<ISSPeople> people;
+
+    private ArrayList<ISSPeople> people;
 
     private Integer number;
 
-    public void setPeople(List<ISSPeople> people) {
+    public ISSNumberOfPeopleDto(String message, List<ISSPeople> people, Integer number) {
+        this.message = message;
+        //this.people = people;
+        this.number = number;
+    }
+
+    public ISSNumberOfPeopleDto() {
+    }
+
+    public void setPeople(ArrayList<ISSPeople> people) {
         this.people = people;
     }
 
-    public List<ISSPeople> getPeople() {
+    public ArrayList<ISSPeople> getPeople() {
         return people;
     }
 
@@ -46,7 +61,7 @@ public class ISSNumberOfPeopleDto {
     public String toString() {
         return "issnumberofppl.ISSNumberOfPeopleDto{" +
                 "message='" + message + '\'' +
-                ", people=" + people +
+                //", people=" + people +
                 ", number=" + number +
                 '}';
     }

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ISSNumberOfPeople_Deserialize {
@@ -53,7 +54,7 @@ public class ISSNumberOfPeople_Deserialize {
                 .defaultInstance()
                 .constructCollectionType(List.class, ISSPeople.class);
 
-        List<ISSPeople> people = objectMapper1.reader(collectionType).readValue(response);
+        ArrayList<ISSPeople> people = objectMapper1.reader(collectionType).readValue(response);
 
 
 
