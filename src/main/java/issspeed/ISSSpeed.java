@@ -1,3 +1,5 @@
+package issspeed;
+
 public class ISSSpeed {
 
     public double getSpeed() throws Exception {
@@ -14,9 +16,9 @@ public class ISSSpeed {
 
         double lon1 = issSpeedDto.getIss_position().getLongitude();
         double lon2 = issSpeedDto2.getIss_position().getLongitude();
-        double distance = distance(lat1,lat2,lon1,lon2);
+        double distance = distance(lat1, lat2, lon1, lon2);
 
-        double speed = distance/(issSpeedDto2.getTimestamp() - issSpeedDto.getTimestamp());
+        double speed = distance / (issSpeedDto2.getTimestamp() - issSpeedDto.getTimestamp());
 
         return speed;
 

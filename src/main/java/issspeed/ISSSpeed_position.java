@@ -1,3 +1,5 @@
+package issspeed;
+
 public class ISSSpeed_position {
     private Double latitude;
     private Double longitude;
@@ -20,7 +22,7 @@ public class ISSSpeed_position {
 
     @Override
     public String toString() {
-        return "ISSSpeed_position{" +
+        return "issspeed.ISSSpeed_position{" +
                 "latitude=" + latitude +
                 ", longitude=" + longitude +
                 '}';

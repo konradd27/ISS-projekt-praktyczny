@@ -1,3 +1,5 @@
+package issnumberofppl;
+
 public class ISSPeople {
     private String name;
     private String craft;
@@ -20,7 +22,7 @@ public class ISSPeople {
 
     @Override
     public String toString() {
-        return "ISSPeople{" +
+        return "issnumberofppl.ISSPeople{" +
                 "name='" + name + '\'' +
                 ", craft='" + craft + '\'' +
                 '}';

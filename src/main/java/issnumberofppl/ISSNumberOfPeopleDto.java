@@ -1,14 +1,11 @@
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+package issnumberofppl;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ISSNumberOfPeopleDto {
     private String message;
 
-     List<ISSPeople> people;
+    List<ISSPeople> people;
 
     private Integer number;
 
@@ -47,7 +44,7 @@ public class ISSNumberOfPeopleDto {
 
     @Override
     public String toString() {
-        return "ISSNumberOfPeopleDto{" +
+        return "issnumberofppl.ISSNumberOfPeopleDto{" +
                 "message='" + message + '\'' +
                 ", people=" + people +
                 ", number=" + number +
