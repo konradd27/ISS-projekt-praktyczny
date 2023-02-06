@@ -10,13 +10,13 @@ import java.util.LinkedList;
 
 public class ISSNumberOfPeople_Hibernate {
 
-    public void saveISSPeople(ArrayList<ISSPeople> issPeople){
+    public void saveISSPeople(ArrayList<ISSPeople> issPeople, SessionFactory sessionFactory){
         Configuration configuration = new Configuration();
 
         configuration.configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(ISSPeople.class);
 
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
+       sessionFactory = configuration.buildSessionFactory();
 
 
 

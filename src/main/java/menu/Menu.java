@@ -8,8 +8,10 @@ import issnumberofppl.ISSNumberOfPeople_Hibernate;
 import issnumberofppl.ISSPeople;
 import issspeed.ISSSpeed;
 import isspass.ISSPass;
+import org.hibernate.SessionFactory;
 
 public class Menu {
+    private SessionFactory sessionFactory;
 
     private boolean isRunning = true;
     private static final String OPTIONS = """
@@ -52,6 +54,7 @@ public class Menu {
 
     private void executeOption(int input) {
 
+
         switch (input) {
             case 1:
                 try {
@@ -78,7 +81,7 @@ public class Menu {
                     }
 
                     ISSNumberOfPeople_Hibernate issNumberOfPeople_hibernate = new ISSNumberOfPeople_Hibernate();
-                    issNumberOfPeople_hibernate.saveISSPeople(issNumberOfPeople.getListOfPeople());
+                    issNumberOfPeople_hibernate.saveISSPeople(issNumberOfPeople.getListOfPeople(), sessionFactory);
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();
