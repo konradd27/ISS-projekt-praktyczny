@@ -1,8 +1,12 @@
 package issspeed;
 
+import javax.persistence.*;
+import java.util.LinkedList;
+import java.util.List;
+
 public class ISSSpeed {
 
-    public double getSpeed() throws Exception {
+    public List<Object> getSpeed() throws Exception {
 
         ISSSpeed_Deserialize issSpeed_deserialize = new ISSSpeed_Deserialize();
 
@@ -19,8 +23,11 @@ public class ISSSpeed {
         double distance = distance(lat1, lat2, lon1, lon2);
 
         double speed = distance / (issSpeedDto2.getTimestamp() - issSpeedDto.getTimestamp());
-
-        return speed;
+        int timeStamp = issSpeedDto.getTimestamp();
+        List<Object> result = new LinkedList<>();
+        result.add(speed);
+        result.add(timeStamp);
+        return result;
 
     }
 
@@ -38,5 +45,6 @@ public class ISSSpeed {
 
         return R * c * 1000;
     }
+
 
 }
