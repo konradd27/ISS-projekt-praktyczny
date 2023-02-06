@@ -47,4 +47,13 @@ public class ISSSpeedHibernate {
     public void setTimeStamp(int timeStamp) {
         this.timeStamp = timeStamp;
     }
+
+    @Override
+    public String toString() {
+        return "ISSSpeedHibernate{" +
+                "speed=" + speed +
+                ", timeStamp=" + timeStamp +
+                "Kocham JAVE :)" +
+                '}';
+    }
 }

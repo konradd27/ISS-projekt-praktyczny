@@ -16,6 +16,7 @@ import issspeed.ISSSpeed;
 import isspass.ISSPass;
 import issspeed.ISSSpeedHibernate;
 import issspeed.ISSSpeedHibernateSessionFactory;
+import issspeed.ISSSpeed_read;
 import org.hibernate.SessionFactory;
 
 public class Menu {
@@ -31,6 +32,7 @@ public class Menu {
             5 - dodatkowa statystika
             6 - zakoncz program""";
     private static final String MENUERRORMESSAGE = "Please enter a number 1-6";
+    private static final String MENUERRORMESSAGE2 = "Please enter a number 1-3";
 
 
     public void startMenu() {
@@ -114,9 +116,18 @@ public class Menu {
                         """);
                 int x = readInt();
                 switch (x){
-                    case 1: {
-
-                    }
+                    case 1:
+                    saveNumberOfPeople();
+                    break;
+                    case 2: saveISSSPeed();
+                    break;
+                    case 3:
+                        saveNumberOfPeople();
+                        saveISSSPeed();
+                        break;
+                    default:
+                        System.out.println(MENUERRORMESSAGE2);
+                        break;
                 }
 
 
@@ -165,7 +176,7 @@ public class Menu {
         List<ISSPeople> issPeople = issNumberOfPeople_read.getISSPeopleFromSQL();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please specify file path:");
+        System.out.println("Please specify file path for list of people data:");
 
         String filePath = scanner.next();
 
@@ -178,18 +189,18 @@ public class Menu {
         }
     }
     void saveISSSPeed(){
-        ISSNumberOfPeople_read issNumberOfPeople_read = new ISSNumberOfPeople_read();
-        List<ISSPeople> issPeople = issNumberOfPeople_read.getISSPeopleFromSQL();
+        ISSSpeed_read issSpeed_read = new ISSSpeed_read();
+        List<ISSSpeedHibernate> issSpeedHibernates = issSpeed_read.getISSSpeedFromSQL();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please specify file path:");
+        System.out.println("Please specify file path for iss speed data:");
 
         String filePath = scanner.next();
 
         Path path = Paths.get(filePath);
         try{
             Files.createFile(path);
-            Files.write(path, issPeople.toString().getBytes(), StandardOpenOption.WRITE);
+            Files.write(path, issSpeedHibernates.toString().getBytes(), StandardOpenOption.WRITE);
         } catch (Exception e){
             e.printStackTrace();
         }
