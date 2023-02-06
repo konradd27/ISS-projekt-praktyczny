@@ -19,6 +19,20 @@ public class ISSPeople {
     @Column(name = "time")
     private LocalDateTime datetime = java.time.LocalDateTime.now();
 
+    public LocalDateTime getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
+    }
+
+    public ISSPeople(String name, String craft, LocalDateTime datetime) {
+        this.name = name;
+        this.craft = craft;
+        this.datetime = datetime;
+    }
+
     public ISSPeople(String name, String craft) {
         this.name = name;
         this.craft = craft;
@@ -46,9 +60,10 @@ public class ISSPeople {
 
     @Override
     public String toString() {
-        return "issnumberofppl.ISSPeople{" +
+        return "ISSPeople{" +
                 "name='" + name + '\'' +
                 ", craft='" + craft + '\'' +
+                ", datetime=" + datetime +
                 '}';
     }
 }

@@ -1,10 +1,16 @@
 package menu;
 
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.Scanner;
 
 import issnumberofppl.ISSNumberOfPeople;
 import issnumberofppl.ISSNumberOfPeople_Hibernate;
+import issnumberofppl.ISSNumberOfPeople_read;
 import issnumberofppl.ISSPeople;
 import issspeed.ISSSpeed;
 import isspass.ISSPass;
@@ -90,7 +96,27 @@ public class Menu {
                 System.out.println(input);
                 break;
             case 5:
-                System.out.println(input);
+                System.out.println("""
+                        Please select option:
+                        1- Save Number of people SQL data to your computer
+                        2- Save ISS speed SQL data to your computer
+                        3- Save both Datas to your computer
+                        
+                        """);
+                int x = readInt();
+                switch (x){
+                    case 1: {
+
+                    }
+                }
+
+
+
+
+
+
+
+
                 break;
             case 6:
                 System.out.println("Program Terminated");
@@ -124,6 +150,26 @@ public class Menu {
 
 
     }
+
+    void saveNumberOfPeople() {
+        ISSNumberOfPeople_read issNumberOfPeople_read = new ISSNumberOfPeople_read();
+        List<ISSPeople> issPeople = issNumberOfPeople_read.getISSPeopleFromSQL();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please specify file path:");
+
+        String filePath = scanner.next();
+
+        Path path = Paths.get(filePath);
+        try{
+            Files.createFile(path);
+            Files.write(path, issPeople.toString().getBytes(), StandardOpenOption.WRITE);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
 
 }
 
