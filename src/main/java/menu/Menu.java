@@ -177,6 +177,23 @@ public class Menu {
             e.printStackTrace();
         }
     }
+    void saveISSSPeed(){
+        ISSNumberOfPeople_read issNumberOfPeople_read = new ISSNumberOfPeople_read();
+        List<ISSPeople> issPeople = issNumberOfPeople_read.getISSPeopleFromSQL();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please specify file path:");
+
+        String filePath = scanner.next();
+
+        Path path = Paths.get(filePath);
+        try{
+            Files.createFile(path);
+            Files.write(path, issPeople.toString().getBytes(), StandardOpenOption.WRITE);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 
 
