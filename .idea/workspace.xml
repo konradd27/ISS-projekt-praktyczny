@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c7127e6-1eb1-4bf6-81cc-41f872663550" name="Changes" comment="aded coment in main class">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c7127e6-1eb1-4bf6-81cc-41f872663550" name="Changes" comment="Changed menu (no more recursions)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/issspeed/ISSSpeedHibernate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/issspeed/ISSSpeedHibernateSessionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/issspeed/ISSSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/issspeed/ISSSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/menu/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,7 @@
   <component name="ProjectId" id="2KVm5MwjrElGmCWY2h1OYM4gnV4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,7 +51,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ISSNumberOfPeople_API">
+  <component name="RunManager">
     <configuration name="ISSNumberOfPeople_API" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ISSNumberOfPeople_API" />
       <module name="ISS-projekt-praktyczny" />
@@ -81,8 +87,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ISSNumberOfPeople_API" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ISSSpeed_API" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ISSSpeed_API" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674068110222</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed menu (no more recursions)">
+      <created>1675277969725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675277969725</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed menu (no more recursions)">
+      <created>1675281116604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675281116604</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup" />
+    <MESSAGE value="Changed menu (no more recursions)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed menu (no more recursions)" />
   </component>
 </project>

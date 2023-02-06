@@ -14,6 +14,8 @@ import issnumberofppl.ISSNumberOfPeople_read;
 import issnumberofppl.ISSPeople;
 import issspeed.ISSSpeed;
 import isspass.ISSPass;
+import issspeed.ISSSpeedHibernate;
+import issspeed.ISSSpeedHibernateSessionFactory;
 import org.hibernate.SessionFactory;
 
 public class Menu {
@@ -65,8 +67,15 @@ public class Menu {
             case 1:
                 try {
                     ISSSpeed issSpeed = new ISSSpeed();
-                    double speed = issSpeed.getSpeed();
-                    System.out.println("ISS current speed is " + speed + " M/S");
+                    List<Object> stats = issSpeed.getSpeed();
+                    Double speed = (double) stats.get(0);
+                    Integer timeStamp = (Integer) stats.get(1);
+
+                    ISSSpeedHibernate issSpeedHibernate = new ISSSpeedHibernate(speed, timeStamp);
+                    ISSSpeedHibernateSessionFactory issSpeedHibernateSessionFactory = new ISSSpeedHibernateSessionFactory();
+                    issSpeedHibernateSessionFactory.issSpeedSave(issSpeedHibernate, sessionFactory);
+                    System.out.println("ISS current speed is " + stats.get(0) + " M/S");
+                    System.out.println("Timestamp is " + stats.get(1) + " seconds");
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();

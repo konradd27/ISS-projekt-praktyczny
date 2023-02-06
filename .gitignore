@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
+hibernate.cfg.xml
 .idea
 .idea*
 .idea/*
